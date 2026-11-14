@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F7F3EC;
+  --color-parchment: #EAE1D5;
+  --color-ivory: #FCF9F4;
+  --color-ink: #252525;
+  --color-ink-muted: #5C554E;
+  --color-terracotta: #B85C45;
+  --color-terracotta-dark: #9A4834;
+  --color-burgundy: #713D46;
+  --color-burgundy-dark: #582D35;
+  --color-gold: #C59A55;
+  --color-gold-dark: #9B7538;
+
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    background-color: #F7F3EC;
+    color: #252525;
+    font-family: "Manrope", system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    background-color: #F7F3EC;
+    color: #252525;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    text-wrap: balance;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #B85C45;
+    outline-offset: 2px;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
